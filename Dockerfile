@@ -29,6 +29,6 @@ RUN apt-get update && \
 	apt-get -y install jotta-cli
 
 COPY root/ /
-RUN chmod +x /etc/my_init.d/*.sh && chmod +x /version.py
+RUN chmod +x /etc/my_init.d/*.sh
 
 VOLUME /sync
