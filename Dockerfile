@@ -21,11 +21,12 @@ CMD ["/sbin/my_init"]
 # Disable SSH
 RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
 
-RUN apt-get install wget apt-transport-https ca-certificates && \
+RUN apt-get update &&
+	apt-get -y install wget apt-transport-https ca-certificates && \
 	wget -O - https://repo.jotta.us/public.gpg | sudo apt-key add - && \
 	echo "deb https://repo.jotta.us/debian debian main" | sudo tee /etc/apt/sources.list.d/jotta-cli.list && \
 	apt-get update && \
-	apt-get install jotta-cli
+	apt-get -y install jotta-cli
 
 COPY root/ /
 RUN chmod +x /etc/my_init.d/*.sh && chmod +x /version.py
