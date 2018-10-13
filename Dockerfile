@@ -8,6 +8,7 @@ ENV LC_ALL C.UTF-8
 ENV LANG de_DE.UTF-8
 ENV LANGUAGE de_DE.UTF-8
 
+
 # Use baseimage-docker's init system
 CMD ["/sbin/my_init"]
 
@@ -29,7 +30,8 @@ RUN apt-get update && \
 	apt-get -y install jotta-cli && \
 	apt-get -y install htop
 
-COPY root/etc/my_init.d/jottacli.sh /etc/my_init.d/jottacli.sh
-RUN chmod +x /etc/my_init.d/jottacli.sh
+COPY root/etc/my_init.d/jottacli.sh /etc/my_init.d/11_jottacli.init
+RUN chmod +x /etc/my_init.d/11_jottacli.init
 
 VOLUME /sync
+VOLUME /var/lib/jottad
