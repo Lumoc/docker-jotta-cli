@@ -5,8 +5,8 @@ MAINTAINER Lumoc
 ENV HOME /root
 ENV DEBIAN_FRONTEND noninteractive
 ENV LC_ALL C.UTF-8
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US.UTF-8
+ENV LANG de_DE.UTF-8
+ENV LANGUAGE de_DE.UTF-8
 
 # Use baseimage-docker's init system
 CMD ["/sbin/my_init"]
