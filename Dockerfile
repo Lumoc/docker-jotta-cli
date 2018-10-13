@@ -30,5 +30,6 @@ RUN apt-get update && \
 	apt-get -y install htop
 
 COPY root/etc/my_init.d/jottacli.sh /etc/my_init.d/jottacli.sh
+RUN chmod +x /etc/my_init.d/jottacli.sh
 
 VOLUME /sync
