@@ -1,5 +1,5 @@
 FROM phusion/baseimage
-MAINTAINER rix1337
+MAINTAINER Lumoc
 
 # Set correct environment variables
 ENV HOME /root
