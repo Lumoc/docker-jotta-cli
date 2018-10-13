@@ -1,9 +1,9 @@
-# docker-jotta-cli
+# docker-jotta-cli on Phusion
 The official Jottacloud CLI
 
 ```
 docker run -d \
   --name="Jottacloud CLI" \
   -v /path/to/sync/:/sync:rw \
-  rix1337/docker-jottacli
+  lumoc/docker-jotta-cli
   ```
