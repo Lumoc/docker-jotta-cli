@@ -29,6 +29,6 @@ RUN apt-get update && \
 	apt-get -y install jotta-cli && \
 	apt-get -y install htop
 
-COPY root/ /
+COPY root/etc/my_init.d/jottacli.sh /etc/my_init.d/jottacli.sh
 
 VOLUME /sync
