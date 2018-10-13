@@ -26,7 +26,8 @@ RUN apt-get update && \
 	wget -O - https://repo.jotta.us/public.gpg | apt-key add - && \
 	echo "deb https://repo.jotta.us/debian debian main" | tee /etc/apt/sources.list.d/jotta-cli.list && \
 	apt-get update && \
-	apt-get -y install jotta-cli
+	apt-get -y install jotta-cli && \
+	apt-get -y install htop
 
 COPY root/ /
 
